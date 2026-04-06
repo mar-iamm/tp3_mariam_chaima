@@ -13,4 +13,5 @@
 ***
 ## Schema d'intéractivité
 
+<img width="770" height="1351" alt="Untitled Diagram drawio (9)" src="https://github.com/user-attachments/assets/9fc8c959-3492-434a-82d9-0679f4ec0a26" />
 
