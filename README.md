@@ -5,7 +5,7 @@
 ***
 ## Description écrite de la proposition
 ***
-## Moodboard visuel (intérieur et extérieur
+## Moodboard visuel (intérieur et extérieur)
 ***
 ## Ambiance sonore
 ***
