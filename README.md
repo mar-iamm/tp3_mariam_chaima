@@ -1,8 +1,8 @@
-# SAKURA CAFE
+# SAKURA CAFÉ
 
 ***
-## Résumé en une phrase
-***
+## Jouer en tant que serveur au Sakura Café pendant des journées occupées et garder les clients heureux pour faire grandir votre restaurant !
+
 ## Description écrite de la proposition
 ***
 ## Moodboard visuel (intérieur et extérieur)
@@ -12,3 +12,5 @@
 ## Carte environnementale
 ***
 ## Schema d'intéractivité
+
+
