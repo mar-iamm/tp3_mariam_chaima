@@ -29,5 +29,6 @@ Par exemple, sur le menu, le commerce vend du café glacé avec des étapes pré
 <img width="770" height="1351" alt="Untitled Diagram drawio (9)" src="https://github.com/user-attachments/assets/9fc8c959-3492-434a-82d9-0679f4ec0a26" />
 
 ### Tutoriel
-<img width="1951" height="1111" alt="tutoriel drawio" src="https://github.com/user-attachments/assets/f446bc91-569d-45fb-af10-d63a909e82e1" />
+<img width="2022" height="1169" alt="tut drawio" src="https://github.com/user-attachments/assets/94d19188-dc72-448f-aacb-2a78cd95e3bb" />
+
 
