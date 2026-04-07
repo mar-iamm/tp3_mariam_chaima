@@ -1,6 +1,6 @@
 # SAKURA CAFÉ
 
-Jouez en tant que serveur au Sakura Café pendant des journées occupées et garder les clients heureux pour faire grandir votre restaurant !
+Jouez en tant que serveur au Sakura Café pendant trois journées occupées et garder les clients heureux pour guarantir de garder votre emploi !
 
 ## Description spécifique
 
