@@ -9,6 +9,7 @@ Incarnez un serveur dans le Sakura Café, un restaurant japonais chaleureux et a
 
 ## Moodboard visuel (intérieur et extérieur)
 ***
+![Moodboard](sakuracafe.png)
 ## Ambiance sonore
 ***
 ## Carte environnementale
