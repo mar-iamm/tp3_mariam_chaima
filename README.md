@@ -13,9 +13,12 @@ Lors du tutoriel, le joueur découvre les bases du fonctionnement du restaurant.
 Par exemple, sur le menu, le commerce vend du café glacé avec des étapes précises tel que choisir le format du verre, ajouter des glaçons, verser une quantité de café et de lait, ajouter du sucre, mélanger et puis finalement servir le client. Pour les desserts, l'employé va devoir la prendre de la vitrine du magasin.
 
 
-## Moodboard visuel (intérieur et extérieur)
+## Moodboard visuel
+
+### Intérieur
 ![Moodboard](sakuracafe.png)
 
+### Éxterieur
 ## Ambiance sonore
 [Écouter le son](https://github.com/mar-iamm/tp3_mariam_chaima/blob/main/bounce-bay-records-traditional-japanese-3-437933.mp3)
 [Écouter le son](https://github.com/mar-iamm/tp3_mariam_chaima/blob/main/lofidreams-lofi-jazz-music-485312.mp3)
