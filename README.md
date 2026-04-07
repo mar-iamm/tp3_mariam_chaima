@@ -12,6 +12,8 @@ Incarnez un serveur dans le Sakura Café, un restaurant japonais chaleureux et a
 ![Moodboard](sakuracafe.png)
 ## Ambiance sonore
 ***
+[Écouter le son](son.mp3)
+[Écouter le son](son.mp3)
 ## Carte environnementale
 ***
 ## Schema d'intéractivité
