@@ -25,5 +25,8 @@ Par exemple, sur le menu, le commerce vend du café glacé avec des étapes pré
 ## Carte environnementale
 ## Schema d'intéractivité
 
+### Jeux
 <img width="770" height="1351" alt="Untitled Diagram drawio (9)" src="https://github.com/user-attachments/assets/9fc8c959-3492-434a-82d9-0679f4ec0a26" />
+
+### Tutoriel
 
