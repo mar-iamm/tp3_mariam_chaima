@@ -74,5 +74,5 @@ L’esthétique sonore s’aligne avec une direction artistique « kawaii », me
 - Codage menu café glacé et donuts : Chaima
 - Audio : Mariam
 - Arrivés des clients et dialogues : Mariam
-- Tutoriel (integrer un texte qui guide le joueur ou faire flasher les objets pour guider le joueur)
+- Tutoriel (integrer un texte qui guide le joueur ou faire flasher les objets pour guider le joueur) : Mariam
 
