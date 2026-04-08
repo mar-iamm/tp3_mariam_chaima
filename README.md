@@ -37,7 +37,7 @@ L’esthétique sonore s’aligne avec une direction artistique « kawaii », me
 
 ### Bruitages
 
-Verser du liquide (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-water-pouring-405458/) br
+Verser du liquide (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-water-pouring-405458/)
 Glaçons (https://pixabay.com/fr/sound-effects/cracking-ice-471457/)
 Pompe de sucre (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-hand-soap-106608/)
 Mélanger (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-027932-water-and-ice-in-a-glass-cup-stirred-with-straw-69482/)
