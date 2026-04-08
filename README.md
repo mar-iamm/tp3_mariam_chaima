@@ -67,4 +67,12 @@ L’esthétique sonore s’aligne avec une direction artistique « kawaii », me
 ### Tutoriel
 <img width="2022" height="1169" alt="tut drawio" src="https://github.com/user-attachments/assets/94d19188-dc72-448f-aacb-2a78cd95e3bb" />
 
+## Répartition des tâches
+
+- Game design (map, menu) : Chaima
+- Codage menu thé aux perles et cookies : Mariam
+- Codage menu café glacé et donuts : Chaima
+- Audio : Mariam
+- Arrivés des clients et dialogues : Mariam
+- Tutoriel (integrer un texte qui guide le joueur ou faire flasher les objets pour guider le joueur)
 
