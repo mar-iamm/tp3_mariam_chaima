@@ -28,9 +28,17 @@ L’ambiance sonore du jeu s’inspire d’un univers japonais doux et apaisant,
 La musique, de style Lo-Fi japonais, crée un fond sonore léger et répétitif qui favorise la concentration tout en réduisant le stress lié au rythme rapide du service. À cela s’ajoutent des sons d’ambiance subtils, tels que le bruit des ustensiles, les interactions avec les clients et une atmosphère générale vivante mais non agressive.
 L’esthétique sonore s’aligne avec une direction artistique « kawaii », mettant de l’avant une ambiance mignonne, colorée et accessible. L’ensemble vise à offrir une expérience immersive, relaxante et agréable, tout en contrastant avec la pression croissante des journées de travail.
 
+### Musiques
+
 (https://www.youtube.com/watch?v=siGSwQF6d8g)
 (https://www.youtube.com/watch?v=01dn67QubYQ&list=RD01dn67QubYQ&start_radio=1)
 (https://www.youtube.com/watch?v=mVycGYAPehY)
+(https://pixabay.com/fr/music/beats-cutie-japan-lofi-402355/)
+
+### Bruitages
+
+
+
 ## Carte environnementale
 
 <img width="1320" height="1399" alt="image" src="https://github.com/user-attachments/assets/82d1f81e-f586-42e8-b4ab-8b1def52528b" />
