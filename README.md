@@ -37,21 +37,21 @@ L’esthétique sonore s’aligne avec une direction artistique « kawaii », me
 
 ### Bruitages
 
-Verser du liquide (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-water-pouring-405458/)
+- Verser du liquide (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-water-pouring-405458/)
 
-Glaçons (https://pixabay.com/fr/sound-effects/cracking-ice-471457/)
+- Glaçons (https://pixabay.com/fr/sound-effects/cracking-ice-471457/)
 
-Pompe de sucre (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-hand-soap-106608/)
+- Pompe de sucre (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-hand-soap-106608/)
 
-Mélanger (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-027932-water-and-ice-in-a-glass-cup-stirred-with-straw-69482/)
+- Mélanger (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-027932-water-and-ice-in-a-glass-cup-stirred-with-straw-69482/)
 
-Bruit de personnage qui parle (https://pixabay.com/fr/sound-effects/gens-talking-nya-3-291989/) (https://pixabay.com/fr/sound-effects/gens-talking-nya-2-291988/) (https://pixabay.com/fr/sound-effects/gens-talking-nya-1-291987/)
+- Bruit de personnage qui parle (https://pixabay.com/fr/sound-effects/gens-talking-nya-3-291989/) (https://pixabay.com/fr/sound-effects/gens-talking-nya-2-291988/) (https://pixabay.com/fr/sound-effects/gens-talking-nya-1-291987/)
 
-Bruit de reussite de commande (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-arcade-ui-1-229498/)
+- Bruit de reussite de commande (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-arcade-ui-1-229498/)
 
-Bruit d'échec de commande (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-error-mistake-sound-effect-incorrect-answer-437420/)
+- Bruit d'échec de commande (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-error-mistake-sound-effect-incorrect-answer-437420/)
 
-Bruit de reussite pour servir la commande (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-arcade-ui-8-229505/)
+- Bruit de reussite pour servir la commande (https://pixabay.com/fr/sound-effects/films-et-effets-sp%c3%a9ciaux-arcade-ui-8-229505/)
 
 ## Carte environnementale
 
