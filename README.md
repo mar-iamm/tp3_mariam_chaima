@@ -23,8 +23,13 @@ Par exemple, sur le menu, le commerce vend du café glacé avec des étapes pré
 <img width="1335" height="752" alt="image" src="https://github.com/user-attachments/assets/a774df71-8fe2-4f77-91f3-5db2f9a53c34" />
 
 ## Ambiance sonore
+
+L’ambiance sonore du jeu s’inspire d’un univers japonais doux et apaisant, combinant une musique Lo-Fi relaxante avec des sons d’environnement immersifs. Le joueur est plongé dans une atmosphère chaleureuse et réconfortante, rappelant les petits cafés japonais calmes et accueillants.
+La musique, de style Lo-Fi japonais, crée un fond sonore léger et répétitif qui favorise la concentration tout en réduisant le stress lié au rythme rapide du service. À cela s’ajoutent des sons d’ambiance subtils, tels que le bruit des ustensiles, les interactions avec les clients et une atmosphère générale vivante mais non agressive.
+L’esthétique sonore s’aligne avec une direction artistique « kawaii », mettant de l’avant une ambiance mignonne, colorée et accessible. L’ensemble vise à offrir une expérience immersive, relaxante et agréable, tout en contrastant avec la pression croissante des journées de travail.
 [Écouter le son](https://github.com/mar-iamm/tp3_mariam_chaima/blob/main/bounce-bay-records-traditional-japanese-3-437933.mp3)
 [Écouter le son](https://github.com/mar-iamm/tp3_mariam_chaima/blob/main/lofidreams-lofi-jazz-music-485312.mp3)
+https://www.youtube.com/watch?v=siGSwQF6d8g
 https://www.youtube.com/watch?v=01dn67QubYQ&list=RD01dn67QubYQ&start_radio=1
 https://www.youtube.com/watch?v=mVycGYAPehY
 ## Carte environnementale
