@@ -16,7 +16,8 @@ Par exemple, sur le menu, le commerce vend du café glacé avec des étapes pré
 ## Moodboard visuel
 
 ### Intérieur
-![Moodboard](sakuracafe.png)
+<img width="2879" height="1615" alt="image" src="https://github.com/user-attachments/assets/90290fb0-5b8e-4149-bd99-d45e9d92dbed" />
+
 
 ### Éxterieur
 ## Ambiance sonore
