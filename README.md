@@ -20,9 +20,12 @@ Par exemple, sur le menu, le commerce vend du café glacé avec des étapes pré
 
 
 ### Éxterieur
+<img width="1335" height="752" alt="image" src="https://github.com/user-attachments/assets/a774df71-8fe2-4f77-91f3-5db2f9a53c34" />
+
 ## Ambiance sonore
 [Écouter le son](https://github.com/mar-iamm/tp3_mariam_chaima/blob/main/bounce-bay-records-traditional-japanese-3-437933.mp3)
 [Écouter le son](https://github.com/mar-iamm/tp3_mariam_chaima/blob/main/lofidreams-lofi-jazz-music-485312.mp3)
+https://www.youtube.com/watch?v=01dn67QubYQ&list=RD01dn67QubYQ&start_radio=1
 ## Carte environnementale
 ## Schema d'intéractivité
 
