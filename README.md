@@ -32,6 +32,11 @@ L’esthétique sonore s’aligne avec une direction artistique « kawaii », me
 (https://www.youtube.com/watch?v=01dn67QubYQ&list=RD01dn67QubYQ&start_radio=1)
 (https://www.youtube.com/watch?v=mVycGYAPehY)
 ## Carte environnementale
+
+<img width="1320" height="1399" alt="image" src="https://github.com/user-attachments/assets/82d1f81e-f586-42e8-b4ab-8b1def52528b" />
+
+*Image généré par ChatGPT*
+
 ## Schema d'intéractivité
 
 ### Jeux
