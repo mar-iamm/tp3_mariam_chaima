@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4894295148405428255}
   - component: {fileID: 933899738233624077}
   - component: {fileID: 742263415657753242}
+  - component: {fileID: 2651022579123019862}
   - component: {fileID: 8636931902949664134}
-  - component: {fileID: 5352427137312251767}
-  - component: {fileID: 2536725304254696568}
+  - component: {fileID: -6164086470251472736}
+  - component: {fileID: 1853166195921414339}
   m_Layer: 0
   m_Name: CafeTable
   m_TagString: Untagged
@@ -86,6 +87,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2651022579123019862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2522482746998550791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b06b310d6ff978408dbdf6282d5acc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetASpanner: {fileID: 2522482746998550791, guid: 096813c3cb8d51d4899cfbafaeb8adb3,
+    type: 3}
+  offset: {x: 0, y: 0.2, z: 0}
 --- !u!64 &8636931902949664134
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -108,7 +124,34 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -9001789469420115890, guid: ac95e458fcfe21f4a919fc173d62c9ee, type: 3}
---- !u!114 &5352427137312251767
+--- !u!54 &-6164086470251472736
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2522482746998550791}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1853166195921414339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,7 +169,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 10
+    m_Bits: 4294967295
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -159,10 +202,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6754127709016164648, guid: 1f5c323dca8c0914180bab57c0c61ff4,
-          type: 3}
+      - m_Target: {fileID: 2651022579123019862}
         m_TargetAssemblyTypeName: SimpleSpawner, Assembly-CSharp
-        m_MethodName: SpawnLeVerre
+        m_MethodName: SpawnObjet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -223,17 +265,3 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2536725304254696568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2522482746998550791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dafe9eceb7f53d40b7b14aab3a146f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objetASpanner: {fileID: 2433474572741269567, guid: 1f5c323dca8c0914180bab57c0c61ff4,
-    type: 3}
