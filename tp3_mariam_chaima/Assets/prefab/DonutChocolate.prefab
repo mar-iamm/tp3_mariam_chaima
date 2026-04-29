@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1967930640038829435}
   - component: {fileID: 3398053307946014090}
   - component: {fileID: 4263400453895652036}
+  - component: {fileID: 8462401296671092778}
   - component: {fileID: 1039088696801762046}
   - component: {fileID: 7070801894087316611}
   - component: {fileID: -2685442985179416398}
@@ -87,6 +88,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8462401296671092778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5548063161212859872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80927b0f144c80b48bad4e0801b0dc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Donut
 --- !u!54 &1039088696801762046
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -113,7 +127,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &7070801894087316611
 MonoBehaviour:
   m_ObjectHideFlags: 0

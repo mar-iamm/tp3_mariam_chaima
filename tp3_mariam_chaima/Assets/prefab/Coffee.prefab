@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4894295148405428255}
   - component: {fileID: 933899738233624077}
   - component: {fileID: 742263415657753242}
+  - component: {fileID: 1887762143690215826}
   - component: {fileID: 8636931902949664134}
   - component: {fileID: -6164086470251472736}
   - component: {fileID: -4913081497709966384}
@@ -87,6 +88,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1887762143690215826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2522482746998550791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80927b0f144c80b48bad4e0801b0dc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Coffee
 --- !u!64 &8636931902949664134
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -135,7 +149,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &-4913081497709966384
 MonoBehaviour:
   m_ObjectHideFlags: 0

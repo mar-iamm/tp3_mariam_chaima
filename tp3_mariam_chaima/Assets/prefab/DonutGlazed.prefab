@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 822874139211238723}
   - component: {fileID: 7582084489972519362}
   - component: {fileID: 6451882999125888896}
+  - component: {fileID: 4536847116251663253}
   - component: {fileID: -7524067957677803821}
   - component: {fileID: 106044601880064164}
   - component: {fileID: -2162905248768901507}
@@ -87,6 +88,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4536847116251663253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2375220976675076651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80927b0f144c80b48bad4e0801b0dc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: DonutGlaze
 --- !u!54 &-7524067957677803821
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -113,7 +127,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &106044601880064164
 MonoBehaviour:
   m_ObjectHideFlags: 0

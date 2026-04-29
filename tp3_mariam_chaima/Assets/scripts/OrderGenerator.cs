@@ -11,7 +11,7 @@ public class OrderGenerator : MonoBehaviour
         "DonutChocolate",
         "DonutStrawberry",
         "DonutGlazed",
-        "CakeChocolate",
+        "CakeStrawberry",
         "CakeLime",
         "CakeBlueberry"
     };

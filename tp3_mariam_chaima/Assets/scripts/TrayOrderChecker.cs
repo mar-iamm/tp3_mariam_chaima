@@ -1,31 +1,86 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+using System.Collections.Generic;
 
 public class TrayOrderChecker : MonoBehaviour
 {
     private Customer currentCustomer;
+    private List<GameObject> objectsOnTray = new List<GameObject>();
 
     public void SetCurrentCustomer(Customer customer)
     {
         currentCustomer = customer;
+        CheckTray();
     }
 
-    public void OnItemPlaced(SelectEnterEventArgs args)
+    private void OnTriggerEnter(Collider other)
     {
-        GameObject placedObject = args.interactableObject.transform.gameObject;
-
-        FoodItem food = placedObject.GetComponent<FoodItem>();
+        FoodItem food = other.GetComponent<FoodItem>();
 
         if (food == null)
+            food = other.GetComponentInParent<FoodItem>();
+
+        if (food == null)
+            return;
+
+        GameObject foodObject = food.gameObject;
+
+        if (!objectsOnTray.Contains(foodObject))
+            objectsOnTray.Add(foodObject);
+
+        CheckTray();
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        FoodItem food = other.GetComponent<FoodItem>();
+
+        if (food == null)
+            food = other.GetComponentInParent<FoodItem>();
+
+        if (food == null)
+            return;
+
+        GameObject foodObject = food.gameObject;
+
+        if (objectsOnTray.Contains(foodObject))
+            objectsOnTray.Remove(foodObject);
+
+        CheckTray();
+    }
+
+    void CheckTray()
+    {
+        if (currentCustomer == null)
         {
-            Debug.Log("Objet sans FoodItem.");
+            GameManager.Instance.SetOrderReady(false);
             return;
         }
 
-        if (currentCustomer != null)
+        List<string> trayItems = new List<string>();
+
+        foreach (GameObject obj in objectsOnTray)
         {
-            currentCustomer.TryGiveItem(food.itemName);
-            Destroy(placedObject);
+            if (obj == null) continue;
+
+            FoodItem food = obj.GetComponent<FoodItem>();
+
+            if (food != null)
+                trayItems.Add(food.itemName);
         }
+
+        bool correct = currentCustomer.CheckOrder(trayItems);
+        GameManager.Instance.SetOrderReady(correct);
+    }
+
+    public void ClearTray()
+    {
+        foreach (GameObject obj in objectsOnTray)
+        {
+            if (obj != null)
+                Destroy(obj);
+        }
+
+        objectsOnTray.Clear();
+        GameManager.Instance.SetOrderReady(false);
     }
 }

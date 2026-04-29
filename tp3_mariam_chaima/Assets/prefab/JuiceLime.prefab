@@ -90,6 +90,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1915065632980748, guid: 7b9e9044605a04568a0c9d41cebd7913,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 416462843051360997}
+    - targetCorrespondingSourceObject: {fileID: 1915065632980748, guid: 7b9e9044605a04568a0c9d41cebd7913,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 7509384967058501222}
     - targetCorrespondingSourceObject: {fileID: 1915065632980748, guid: 7b9e9044605a04568a0c9d41cebd7913,
         type: 3}
@@ -124,6 +128,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objetASpanner: {fileID: 2693629787449850250}
   offset: {x: 0, y: 0.2, z: 0}
+--- !u!114 &416462843051360997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2693629787449850250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80927b0f144c80b48bad4e0801b0dc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: JuiceL
 --- !u!54 &7509384967058501222
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -150,7 +167,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &-1611227116070594722
 MonoBehaviour:
   m_ObjectHideFlags: 0

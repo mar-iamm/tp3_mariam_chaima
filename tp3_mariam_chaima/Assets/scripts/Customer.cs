@@ -1,106 +1,60 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 public class Customer : MonoBehaviour
 {
-    public float baseWaitTime = 30f;
-    private float timer;
+    [Header("Commande")]
+    public List<string> currentOrder = new List<string>();
+    public OrderGenerator orderGenerator;
+    public OrderBubbleUI bubbleUI;
+
+    [Header("Animations")]
+    public Animator animator;
+    public string enterTrigger = "Enter";
+    public string leaveTrigger = "Leave";
 
     public bool orderCompleted = false;
 
-    public List<string> currentOrder = new List<string>();
-
-    public OrderBubbleUI bubbleUI;
-    public OrderGenerator orderGenerator;
-    public CustomerMovement movement;
-    public Transform counterTarget;
-
-    public TrayOrderChecker trayChecker;
-
-    void Start()
+    public void StartCustomer()
     {
-        timer = baseWaitTime - ((GameManager.Instance.currentDay - 1) * 10f);
+        orderCompleted = false;
 
-        if (timer < 10f)
-            timer = 10f;
-
-        StartCoroutine(CustomerFlow());
-    }
-
-    IEnumerator CustomerFlow()
-    {
-        if (movement != null && counterTarget != null)
-            movement.MoveTo(counterTarget);
-
-        yield return new WaitUntil(() => movement.HasReached());
-
-        ShowOrder();
-
-        if (trayChecker != null)
-            trayChecker.SetCurrentCustomer(this);
-
-        while (timer > 0 && !orderCompleted)
-        {
-            timer -= Time.deltaTime;
-            yield return null;
-        }
-
-        if (!orderCompleted)
-        {
-            Debug.Log("Temps écoulé.");
-            Leave();
-        }
-    }
-
-    void ShowOrder()
-    {
         if (orderGenerator != null)
             currentOrder = orderGenerator.GenerateOrder();
 
         if (bubbleUI != null)
             bubbleUI.DisplayOrder(currentOrder);
+
+        if (animator != null)
+            animator.SetTrigger(enterTrigger);
     }
 
-    public void TryGiveItem(string itemName)
+    public bool CheckOrder(List<string> trayItems)
     {
-        if (orderCompleted) return;
+        if (trayItems.Count != currentOrder.Count)
+            return false;
 
-        if (currentOrder.Contains(itemName))
+        List<string> orderCopy = new List<string>(currentOrder);
+
+        foreach (string item in trayItems)
         {
-            currentOrder.Remove(itemName);
-
-            if (bubbleUI != null)
-                bubbleUI.DisplayOrder(currentOrder);
-
-            if (currentOrder.Count == 0)
-            {
-                CompleteOrder();
-            }
+            if (orderCopy.Contains(item))
+                orderCopy.Remove(item);
+            else
+                return false;
         }
+
+        return orderCopy.Count == 0;
     }
 
-    public void CompleteOrder()
+    public void Leave()
     {
         orderCompleted = true;
-        GameManager.Instance.AddScore(100);
-        Leave();
-    }
 
-    void Leave()
-    {
-        if (movement != null)
-            movement.StopMoving();
+        if (bubbleUI != null)
+            bubbleUI.DisplayOrder(new List<string>());
 
-        Destroy(gameObject, 2f);
-
-        DayManager dayManager = FindObjectOfType<DayManager>();
-        if (dayManager != null)
-            dayManager.CustomerFinished();
-    }
-
-    public float GetTimeRemaining()
-    {
-        return timer;
+        if (animator != null)
+            animator.SetTrigger(leaveTrigger);
     }
 }

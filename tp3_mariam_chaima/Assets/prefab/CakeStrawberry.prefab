@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 7924512855818168371}
   - component: {fileID: 4330405582026882976}
   - component: {fileID: 6016613049687505052}
+  - component: {fileID: 6209341022638315947}
   - component: {fileID: 34965027433905809}
   - component: {fileID: -401564609583690696}
   - component: {fileID: -3692542871424125526}
   - component: {fileID: 5444470687361960721}
   - component: {fileID: 6779496634929160234}
   m_Layer: 0
-  m_Name: CakeChocolate
+  m_Name: CakeStrawberry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,6 +89,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6209341022638315947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5392343985615725207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80927b0f144c80b48bad4e0801b0dc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: CakeStrawberry
 --- !u!64 &34965027433905809
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -136,7 +150,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &-3692542871424125526
 MonoBehaviour:
   m_ObjectHideFlags: 0
