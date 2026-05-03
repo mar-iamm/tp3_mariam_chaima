@@ -3,7 +3,18 @@ guid: 5821287b2cbc1c4468d67156ab21a4cd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - itemUIPrefab: {instanceID: 0}
+  - container: {instanceID: 0}
+  - coffee: {fileID: 21300000, guid: 345c69cb53a794246b5161f3f6f5eebc, type: 3}
+  - juiceOrange: {fileID: 21300000, guid: a9a94c79621a5814e8108e583809b07a, type: 3}
+  - juiceLime: {fileID: 21300000, guid: 68df2c614263e954e9233b8308c96677, type: 3}
+  - donutChocolate: {fileID: 21300000, guid: d112e2b4e129d584c9794b50afd80f47, type: 3}
+  - donutStrawberry: {fileID: 21300000, guid: 4edc356e7af5b824692849631e5c0b48, type: 3}
+  - donutGlazed: {fileID: 21300000, guid: 72d8da10199bea5428320136ed5d4e50, type: 3}
+  - cakeStrawberry: {fileID: 21300000, guid: 29028b0e80275bc4c8ac936df78bfad4, type: 3}
+  - cakeLime: {fileID: 21300000, guid: 556f4315d576808428103c8d540da691, type: 3}
+  - cakeBlueberry: {fileID: 21300000, guid: e7fef3e190487fb4d8b756b66824835e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

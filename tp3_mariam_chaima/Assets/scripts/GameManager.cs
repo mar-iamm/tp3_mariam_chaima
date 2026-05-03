@@ -1,7 +1,7 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 using System;
-using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,14 +16,13 @@ public class GameManager : MonoBehaviour
     public TrayOrderChecker trayChecker;
 
     [Header("Score")]
+    public int currentDay = 1;
+    public int dayScore = 0;
     public int totalScore = 0;
     public int scorePerOrder = 100;
-    public int winScore = 300;
-    public event Action<int> OnScoreChanged;
+    public int winScore = 900;
 
-    [Header("UI")]
-    public TextMeshProUGUI resultText;
-    public GameObject resultPanel;
+    public event Action<int> OnScoreChanged;
 
     private bool customerActive = false;
     private bool orderReady = false;
@@ -31,19 +30,58 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()
     {
-        resultPanel.SetActive(false);
+        SetupDayScene();
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "Day1")
+        {
+            SetupDayScene();
+        }
+    }
+
+    void SetupDayScene()
+    {
+        customers = FindObjectsOfType<Customer>(true);
+        trayChecker = FindObjectOfType<TrayOrderChecker>();
+
+        currentCustomerIndex = -1;
+        currentCustomer = null;
+        customerActive = false;
+        orderReady = false;
+        customersCompleted = 0;
+        dayScore = 0;
 
         foreach (Customer c in customers)
         {
             c.gameObject.SetActive(false);
         }
 
-        OnScoreChanged?.Invoke(totalScore);
+        OnScoreChanged?.Invoke(dayScore);
     }
 
     public void CallNextCustomer()
@@ -66,7 +104,8 @@ public class GameManager : MonoBehaviour
         currentCustomer.gameObject.SetActive(true);
         currentCustomer.StartCustomer();
 
-        trayChecker.SetCurrentCustomer(currentCustomer);
+        if (trayChecker != null)
+            trayChecker.SetCurrentCustomer(currentCustomer);
 
         customerActive = true;
         orderReady = false;
@@ -99,43 +138,46 @@ public class GameManager : MonoBehaviour
         orderReady = false;
         customersCompleted++;
 
-        trayChecker.ClearTray();
+        if (trayChecker != null)
+            trayChecker.ClearTray();
 
-        if (customersCompleted >= customers.Length)
+        if (customersCompleted >= 4)
         {
-            EndGame();
+            SceneManager.LoadScene("DayResult");
         }
     }
 
     public void AddScore(int amount)
     {
+        dayScore += amount;
         totalScore += amount;
-        OnScoreChanged?.Invoke(totalScore);
+
+        Debug.Log("Score journée : " + dayScore);
+        Debug.Log("Score total : " + totalScore);
+
+        OnScoreChanged?.Invoke(dayScore);
     }
 
-    void EndGame()
+    public void GoNextDay()
     {
-        resultPanel.SetActive(true);
+        currentDay++;
 
-        if (totalScore >= winScore)
+        if (currentDay <= 3)
         {
-            resultText.text = 
-                "Fin des 4 clients\n" +
-                "Score final : " + totalScore + "\n" +
-                "Félicitations, tu es embauché !";
+            SceneManager.LoadScene("Day1");
         }
         else
         {
-            resultText.text = 
-                "Fin des 4 clients\n" +
-                "Score final : " + totalScore + "\n" +
-                "Tu n'as pas encore prouvé que tu peux être embauché.";
+            SceneManager.LoadScene("FinalResult");
         }
     }
 
     public void RestartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Day1");
+        currentDay = 1;
+        dayScore = 0;
+        totalScore = 0;
+        SceneManager.LoadScene("Intro");
     }
 
     public void QuitGame()

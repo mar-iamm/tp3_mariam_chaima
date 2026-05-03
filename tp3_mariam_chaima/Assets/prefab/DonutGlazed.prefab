@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80927b0f144c80b48bad4e0801b0dc29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: DonutGlaze
+  itemName: DonutGlazed
 --- !u!54 &-7524067957677803821
 Rigidbody:
   m_ObjectHideFlags: 0

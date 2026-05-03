@@ -15,19 +15,35 @@ public class Customer : MonoBehaviour
 
     public bool orderCompleted = false;
 
-    public void StartCustomer()
+public void StartCustomer()
+{
+    orderCompleted = false;
+
+    Debug.Log("StartCustomer appelé sur : " + gameObject.name);
+
+    if (orderGenerator != null)
     {
-        orderCompleted = false;
-
-        if (orderGenerator != null)
-            currentOrder = orderGenerator.GenerateOrder();
-
-        if (bubbleUI != null)
-            bubbleUI.DisplayOrder(currentOrder);
-
-        if (animator != null)
-            animator.SetTrigger(enterTrigger);
+        currentOrder = orderGenerator.GenerateOrder();
+        Debug.Log("Commande générée : " + string.Join(", ", currentOrder));
     }
+    else
+    {
+        Debug.LogError("OrderGenerator manquant sur " + gameObject.name);
+    }
+
+    if (bubbleUI != null)
+    {
+        Debug.Log("BubbleUI trouvée sur : " + bubbleUI.gameObject.name);
+        bubbleUI.DisplayOrder(currentOrder);
+    }
+    else
+    {
+        Debug.LogError("BubbleUI manquante sur " + gameObject.name);
+    }
+
+    if (animator != null)
+        animator.SetTrigger(enterTrigger);
+}
 
     public bool CheckOrder(List<string> trayItems)
     {
@@ -47,14 +63,21 @@ public class Customer : MonoBehaviour
         return orderCopy.Count == 0;
     }
 
-    public void Leave()
-    {
-        orderCompleted = true;
+public void Leave()
+{
+    orderCompleted = true;
 
-        if (bubbleUI != null)
-            bubbleUI.DisplayOrder(new List<string>());
+    if (bubbleUI != null)
+        bubbleUI.DisplayOrder(new List<string>());
 
-        if (animator != null)
-            animator.SetTrigger(leaveTrigger);
-    }
+    if (animator != null)
+        animator.SetTrigger(leaveTrigger);
+
+    Invoke(nameof(HideCustomer), 2f);
+}
+
+void HideCustomer()
+{
+    gameObject.SetActive(false);
+}
 }

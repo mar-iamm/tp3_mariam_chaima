@@ -13,7 +13,7 @@ public class OrderBubbleUI : MonoBehaviour
     public Sprite donutChocolate;
     public Sprite donutStrawberry;
     public Sprite donutGlazed;
-    public Sprite cakeChocolate;
+    public Sprite cakeStrawberry;
     public Sprite cakeLime;
     public Sprite cakeBlueberry;
 
@@ -24,14 +24,45 @@ public class OrderBubbleUI : MonoBehaviour
         spriteDict = new Dictionary<string, Sprite>()
         {
             { "Coffee", coffee },
+            { "coffee", coffee },
+
             { "JuiceOrange", juiceOrange },
+            { "Juice_Orange", juiceOrange },
+            { "orangeDrink", juiceOrange },
+            { "orangedrink", juiceOrange },
+
             { "JuiceLime", juiceLime },
+            { "Juice_Lime", juiceLime },
+            { "limeDrink", juiceLime },
+            { "limedrink", juiceLime },
+
             { "DonutChocolate", donutChocolate },
+            { "DonutChoco", donutChocolate },
+            { "chocolateDonut", donutChocolate },
+            { "chocolatedonut", donutChocolate },
+
             { "DonutStrawberry", donutStrawberry },
+            { "DonutStraw", donutStrawberry },
+            { "strawberryDonut", donutStrawberry },
+            { "strawberrydonut", donutStrawberry },
+
             { "DonutGlazed", donutGlazed },
-            { "CakeChocolate", cakeChocolate },
+            { "glazedDonut", donutGlazed },
+            { "glazeddonut", donutGlazed },
+
+            { "CakeStrawberry", cakeStrawberry },
+            { "CakeStrawb", cakeStrawberry },
+            { "strawberryCake", cakeStrawberry },
+            { "strawberry cake", cakeStrawberry },
+
             { "CakeLime", cakeLime },
-            { "CakeBlueberry", cakeBlueberry }
+            { "limeCake", cakeLime },
+            { "limecake", cakeLime },
+
+            { "CakeBlueberry", cakeBlueberry },
+            { "CakeBlueber", cakeBlueberry },
+            { "blueberryCake", cakeBlueberry },
+            { "blueberrycake", cakeBlueberry }
         };
     }
 
@@ -45,11 +76,19 @@ public class OrderBubbleUI : MonoBehaviour
             GameObject ui = Instantiate(itemUIPrefab, container);
             Image img = ui.GetComponent<Image>();
 
-            if (spriteDict.ContainsKey(item))
+            if (img != null && spriteDict.ContainsKey(item))
+            {
                 img.sprite = spriteDict[item];
+                img.color = Color.white;
+                img.preserveAspect = true;
+            }
+            else
+            {
+                Debug.LogWarning("Sprite ou Image manquant pour : " + item);
+            }
         }
     }
-
+    
     void Update()
     {
         if (Camera.main != null)
