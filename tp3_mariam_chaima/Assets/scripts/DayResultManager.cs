@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DayResultManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public TextMeshPro resultText;
+
     void Start()
     {
-        
+        resultText.text =
+            "Journée " + GameManager.Instance.currentDay + " terminée\n\n" +
+            "Score de la journée : " + GameManager.Instance.dayScore + "\n" +
+            "Score total : " + GameManager.Instance.totalScore;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Continue()
     {
-        
+        GameManager.Instance.GoNextDay();
     }
 }

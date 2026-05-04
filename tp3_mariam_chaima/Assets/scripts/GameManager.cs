@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 using System;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
+    public static int savedCurrentDay = 1;
+    public static int savedTotalScore = 0;
 
     [Header("Clients")]
     public Customer[] customers;
@@ -30,44 +32,22 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
     }
 
     void Start()
     {
-        SetupDayScene();
-    }
+        currentDay = savedCurrentDay;
+        totalScore = savedTotalScore;
 
-    void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (scene.name == "Day1")
-        {
+        if (SceneManager.GetActiveScene().name == "Day1")
             SetupDayScene();
-        }
     }
 
     void SetupDayScene()
     {
         customers = FindObjectsOfType<Customer>(true);
-        trayChecker = FindObjectOfType<TrayOrderChecker>();
+        trayChecker = FindObjectOfType<TrayOrderChecker>(true);
 
         currentCustomerIndex = -1;
         currentCustomer = null;
@@ -78,8 +58,11 @@ public class GameManager : MonoBehaviour
 
         foreach (Customer c in customers)
         {
-            c.gameObject.SetActive(false);
+            if (c != null)
+                c.gameObject.SetActive(false);
         }
+
+        Debug.Log("Journée " + currentDay + " initialisée. Clients trouvés : " + customers.Length);
 
         OnScoreChanged?.Invoke(dayScore);
     }
@@ -89,6 +72,12 @@ public class GameManager : MonoBehaviour
         if (customerActive)
         {
             Debug.Log("Un client est déjà actif.");
+            return;
+        }
+
+        if (customers == null || customers.Length == 0)
+        {
+            Debug.LogError("Aucun client trouvé dans Day1.");
             return;
         }
 
@@ -114,6 +103,7 @@ public class GameManager : MonoBehaviour
     public void SetOrderReady(bool ready)
     {
         orderReady = ready;
+        Debug.Log("Order ready = " + orderReady);
     }
 
     public void GiveOrder()
@@ -142,15 +132,14 @@ public class GameManager : MonoBehaviour
             trayChecker.ClearTray();
 
         if (customersCompleted >= 4)
-        {
             SceneManager.LoadScene("DayResult");
-        }
     }
 
     public void AddScore(int amount)
     {
         dayScore += amount;
         totalScore += amount;
+        savedTotalScore = totalScore;
 
         Debug.Log("Score journée : " + dayScore);
         Debug.Log("Score total : " + totalScore);
@@ -160,23 +149,23 @@ public class GameManager : MonoBehaviour
 
     public void GoNextDay()
     {
-        currentDay++;
+        savedCurrentDay++;
 
-        if (currentDay <= 3)
-        {
+        if (savedCurrentDay <= 3)
             SceneManager.LoadScene("Day1");
-        }
         else
-        {
             SceneManager.LoadScene("FinalResult");
-        }
     }
 
     public void RestartGame()
     {
+        savedCurrentDay = 1;
+        savedTotalScore = 0;
+
         currentDay = 1;
         dayScore = 0;
         totalScore = 0;
+
         SceneManager.LoadScene("Intro");
     }
 
