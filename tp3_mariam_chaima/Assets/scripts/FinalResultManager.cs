@@ -7,7 +7,7 @@ public class FinalResultManager : MonoBehaviour
 
     void Start()
     {
-        int score = GameManager.Instance.totalScore;
+        int score = GameManager.Instance.totalScore;   
         int winScore = GameManager.Instance.winScore;
 
         if (score >= winScore)

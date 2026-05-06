@@ -17841,7 +17841,7 @@ MonoBehaviour:
   dayScore: 0
   totalScore: 0
   scorePerOrder: 100
-  winScore: 900
+  winScore: 800
 --- !u!4 &2091181815
 Transform:
   m_ObjectHideFlags: 0

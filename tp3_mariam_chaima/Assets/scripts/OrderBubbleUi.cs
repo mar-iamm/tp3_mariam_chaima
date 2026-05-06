@@ -81,6 +81,7 @@ public class OrderBubbleUI : MonoBehaviour
                 img.sprite = spriteDict[item];
                 img.color = Color.white;
                 img.preserveAspect = true;
+                Debug.LogWarning("Sprite ou Image loadé : " + item);
             }
             else
             {
