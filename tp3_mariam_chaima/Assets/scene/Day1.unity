@@ -862,7 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe7225a6b0d2e142ab8d5fc375c38f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentOrder: []
+  currentOrder: 
   orderGenerator: {fileID: 670783707}
   bubbleUI: {fileID: 1096351802}
   animator: {fileID: 147830502}
@@ -881,16 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4581ffe552d1ec46bcec1dd245d8abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleItems:
-  - Coffee
-  - JuiceOrange
-  - JuiceLime
-  - DonutChocolate
-  - DonutStrawberry
-  - DonutGlazed
-  - CakeStrawberry
-  - CakeLime
-  - CakeBlueberry
+  possibleItems: 000000000000000000000000000000000000000000000000000000000000000000000000
   minItems: 1
   maxItems: 3
 --- !u!1001 &148153279
@@ -3313,7 +3304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe7225a6b0d2e142ab8d5fc375c38f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentOrder: []
+  currentOrder: 
   orderGenerator: {fileID: 670783707}
   bubbleUI: {fileID: 358302004}
   animator: {fileID: 385496103}
@@ -3332,16 +3323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4581ffe552d1ec46bcec1dd245d8abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleItems:
-  - Coffee
-  - JuiceOrange
-  - JuiceLime
-  - DonutChocolate
-  - DonutStrawberry
-  - DonutGlazed
-  - CakeStrawberry
-  - CakeLime
-  - CakeBlueberry
+  possibleItems: 000000000000000000000000000000000000000000000000000000000000000000000000
   minItems: 1
   maxItems: 3
 --- !u!1 &385933960 stripped
@@ -5529,16 +5511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4581ffe552d1ec46bcec1dd245d8abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleItems:
-  - Coffee
-  - JuiceOrange
-  - JuiceLime
-  - DonutChocolate
-  - DonutStrawberry
-  - DonutGlazed
-  - CakeChocolate
-  - CakeLime
-  - CakeBlueberry
+  possibleItems: 000000000100000002000000030000000400000005000000060000000700000008000000
   minItems: 1
   maxItems: 3
 --- !u!4 &670783708
@@ -13323,7 +13296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe7225a6b0d2e142ab8d5fc375c38f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentOrder: []
+  currentOrder: 
   orderGenerator: {fileID: 670783707}
   bubbleUI: {fileID: 1617725591}
   animator: {fileID: 1596499443}
@@ -13342,16 +13315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4581ffe552d1ec46bcec1dd245d8abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleItems:
-  - Coffee
-  - JuiceOrange
-  - JuiceLime
-  - DonutChocolate
-  - DonutStrawberry
-  - DonutGlazed
-  - CakeStrawberry
-  - CakeLime
-  - CakeBlueberry
+  possibleItems: 000000000000000000000000000000000000000000000000000000000000000000000000
   minItems: 1
   maxItems: 3
 --- !u!1001 &1608127283
@@ -16940,7 +16904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe7225a6b0d2e142ab8d5fc375c38f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentOrder: []
+  currentOrder: 
   orderGenerator: {fileID: 670783707}
   bubbleUI: {fileID: 1087679132}
   animator: {fileID: 1977544940}
@@ -16959,16 +16923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4581ffe552d1ec46bcec1dd245d8abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleItems:
-  - Coffee
-  - JuiceOrange
-  - JuiceLime
-  - DonutChocolate
-  - DonutStrawberry
-  - DonutGlazed
-  - CakeStrawberry
-  - CakeLime
-  - CakeBlueberry
+  possibleItems: 000000000000000000000000000000000000000000000000000000000000000000000000
   minItems: 1
   maxItems: 3
 --- !u!1001 &1987393744

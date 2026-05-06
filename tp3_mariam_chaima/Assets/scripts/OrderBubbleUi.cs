@@ -1,12 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
-
 public class OrderBubbleUI : MonoBehaviour
 {
     public GameObject itemUIPrefab;
     public Transform container;
-
+    [Header("Sprites")]
     public Sprite coffee;
     public Sprite juiceOrange;
     public Sprite juiceLime;
@@ -16,80 +15,53 @@ public class OrderBubbleUI : MonoBehaviour
     public Sprite cakeStrawberry;
     public Sprite cakeLime;
     public Sprite cakeBlueberry;
-
-    private Dictionary<string, Sprite> spriteDict;
-
+    private Dictionary<ItemType, Sprite> spriteDict;
     void Awake()
     {
-        spriteDict = new Dictionary<string, Sprite>()
-        {
-            { "Coffee", coffee },
-            { "coffee", coffee },
-
-            { "JuiceOrange", juiceOrange },
-            { "Juice_Orange", juiceOrange },
-            { "orangeDrink", juiceOrange },
-            { "orangedrink", juiceOrange },
-
-            { "JuiceLime", juiceLime },
-            { "Juice_Lime", juiceLime },
-            { "limeDrink", juiceLime },
-            { "limedrink", juiceLime },
-
-            { "DonutChocolate", donutChocolate },
-            { "DonutChoco", donutChocolate },
-            { "chocolateDonut", donutChocolate },
-            { "chocolatedonut", donutChocolate },
-
-            { "DonutStrawberry", donutStrawberry },
-            { "DonutStraw", donutStrawberry },
-            { "strawberryDonut", donutStrawberry },
-            { "strawberrydonut", donutStrawberry },
-
-            { "DonutGlazed", donutGlazed },
-            { "glazedDonut", donutGlazed },
-            { "glazeddonut", donutGlazed },
-
-            { "CakeStrawberry", cakeStrawberry },
-            { "CakeStrawb", cakeStrawberry },
-            { "strawberryCake", cakeStrawberry },
-            { "strawberry cake", cakeStrawberry },
-
-            { "CakeLime", cakeLime },
-            { "limeCake", cakeLime },
-            { "limecake", cakeLime },
-
-            { "CakeBlueberry", cakeBlueberry },
-            { "CakeBlueber", cakeBlueberry },
-            { "blueberryCake", cakeBlueberry },
-            { "blueberrycake", cakeBlueberry }
-        };
+        spriteDict = new Dictionary<ItemType, Sprite>()
+       {
+           { ItemType.Coffee, coffee },
+           { ItemType.JuiceOrange, juiceOrange },
+           { ItemType.JuiceLime, juiceLime },
+           { ItemType.DonutChocolate, donutChocolate },
+           { ItemType.DonutStrawberry, donutStrawberry },
+           { ItemType.DonutGlazed, donutGlazed },
+           { ItemType.CakeStrawberry, cakeStrawberry },
+           { ItemType.CakeLime, cakeLime },
+           { ItemType.CakeBlueberry, cakeBlueberry }
+       };
     }
-
-    public void DisplayOrder(List<string> items)
+    public void DisplayOrder(List<ItemType> items)
     {
         foreach (Transform child in container)
             Destroy(child.gameObject);
-
-        foreach (string item in items)
+        foreach (ItemType item in items)
         {
             GameObject ui = Instantiate(itemUIPrefab, container);
             Image img = ui.GetComponent<Image>();
-
-            if (img != null && spriteDict.ContainsKey(item))
+            if (img == null)
             {
-                img.sprite = spriteDict[item];
-                img.color = Color.white;
-                img.preserveAspect = true;
-                Debug.LogWarning("Sprite ou Image load� : " + item);
+                Debug.LogError("Image manquante sur prefab UI");
+                continue;
             }
-            else
+            if (!spriteDict.ContainsKey(item))
             {
-                Debug.LogWarning("Sprite ou Image manquant pour : " + item);
+                Debug.LogError("Item non trouvé dans dictionnaire : " + item);
+                continue;
             }
+            Sprite sprite = spriteDict[item];
+            if (sprite == null)
+            {
+                Debug.LogError("Sprite NULL pour : " + item);
+                continue;
+            }
+            img.sprite = sprite;
+            img.color = Color.white;
+            img.preserveAspect = true;
+            Debug.Log("Affiché : " + item);
         }
     }
-    
+
     void Update()
     {
         if (Camera.main != null)

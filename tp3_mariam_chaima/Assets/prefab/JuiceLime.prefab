@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80927b0f144c80b48bad4e0801b0dc29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: JuiceLime
+  itemType: 2
 --- !u!54 &7509384967058501222
 Rigidbody:
   m_ObjectHideFlags: 0

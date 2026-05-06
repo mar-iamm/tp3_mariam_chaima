@@ -27,7 +27,7 @@ public class TrayOrderChecker : MonoBehaviour
         if (!objectsOnTray.Contains(foodObject))
         {
             objectsOnTray.Add(foodObject);
-            Debug.Log("Item ajouté : " + food.itemName);
+            Debug.Log("Item ajouté : " + food.itemType);
         }
         CheckTray();
     }
@@ -44,11 +44,11 @@ public class TrayOrderChecker : MonoBehaviour
         if (objectsOnTray.Contains(foodObject))
         {
             objectsOnTray.Remove(foodObject);
-            Debug.Log("Item retiré : " + food.itemName);
+            Debug.Log("Item retiré : " + food.itemType);
         }
         CheckTray();
     }
-    // ✅ CHECK COMMANDE
+    // ✅ CHECK COMMANDE (ENUM)
     void CheckTray()
     {
         if (currentCustomer == null)
@@ -56,7 +56,7 @@ public class TrayOrderChecker : MonoBehaviour
             GameManager.Instance.SetOrderReady(false);
             return;
         }
-        List<string> trayItems = new List<string>();
+        List<ItemType> trayItems = new List<ItemType>();
         foreach (GameObject obj in objectsOnTray)
         {
             if (obj == null) continue;
@@ -64,7 +64,7 @@ public class TrayOrderChecker : MonoBehaviour
             if (food == null)
                 food = obj.GetComponentInParent<FoodItem>();
             if (food != null)
-                trayItems.Add(food.itemName);
+                trayItems.Add(food.itemType);
         }
         bool correct = currentCustomer.CheckOrder(trayItems);
         Debug.Log("Commande correcte ? " + correct);
