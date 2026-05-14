@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class FinalResultManager : MonoBehaviour
 {
@@ -7,8 +8,14 @@ public class FinalResultManager : MonoBehaviour
 
     void Start()
     {
-        int score = GameManager.Instance.totalScore;   
-        int winScore = GameManager.Instance.winScore;
+        int score = GameManager.savedTotalScore;
+        int winScore = 800;
+
+        if (finalText == null)
+        {
+            Debug.LogError("Final Text n'est pas assigné dans FinalResultManager.");
+            return;
+        }
 
         if (score >= winScore)
         {
@@ -28,11 +35,15 @@ public class FinalResultManager : MonoBehaviour
 
     public void Restart()
     {
-        GameManager.Instance.RestartGame();
+        GameManager.savedCurrentDay = 1;
+        GameManager.savedDayScore = 0;
+        GameManager.savedTotalScore = 0;
+
+        SceneManager.LoadScene("Intro");
     }
 
     public void Quit()
     {
-        GameManager.Instance.QuitGame();
+        Application.Quit();
     }
 }
