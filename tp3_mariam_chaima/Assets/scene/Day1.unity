@@ -17740,6 +17740,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8086367680739721079, guid: bd7d59e411898be43b840ede2dec7765,
         type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 278575140}
+    - target: {fileID: 8086367680739721079, guid: bd7d59e411898be43b840ede2dec7765,
+        type: 3}
       propertyPath: m_InteractionLayers.m_Bits
       value: 2
       objectReference: {fileID: 0}

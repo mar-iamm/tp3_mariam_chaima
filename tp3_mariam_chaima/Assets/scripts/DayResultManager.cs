@@ -7,6 +7,12 @@ public class DayResultManager : MonoBehaviour
 
     void Start()
     {
+        if (resultText == null)
+        {
+            Debug.LogError("Result Text n'est pas assigné dans DayResultManager.");
+            return;
+        }
+
         resultText.text =
             "Journée " + GameManager.Instance.currentDay + " terminée\n\n" +
             "Score de la journée : " + GameManager.Instance.dayScore + "\n" +
